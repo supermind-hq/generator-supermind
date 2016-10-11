@@ -1,0 +1,49 @@
+{
+  "name": "generator-supermind",
+  "version": "0.0.0",
+  "description": "Yeoman generator for Supermind projects",
+  "homepage": "https://github.com/supermind-hq/generator-supermind#readme",
+  "author": "Matthew Wagerfield <matthew@supermind.com>",
+  "license": "MIT",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "files": [
+    "generators"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supermind-hq/generator-supermind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/supermind-hq/generator-supermind/issues"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "watch": "gulp watch",
+    "compile": "gulp compile",
+    "prepublish": "npm run compile"
+  },
+  "dependencies": {
+    "lodash": "^4.16.4",
+    "yeoman-generator": "^0.24.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-latest": "^6.16.0",
+    "del": "^2.2.2",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-sourcemaps": "^2.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "pump": "^1.0.1"
+  }
+}
