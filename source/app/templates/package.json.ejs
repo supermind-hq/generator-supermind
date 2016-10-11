@@ -1,0 +1,28 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "homepage": "<%= url %>#readme",
+  "keywords": <%= keywords %>,
+  "private": <%= private %>,
+  "author": "<%= author %>",
+  "url": {
+    "type": "git",
+    "url": "git+<%= url %>.git"
+  },
+  "bugs": {
+    "url": "<%= url %>/issues"
+  },
+  "scripts": {
+    "dev": "packager",
+    "build": "packager env.production",
+    "start": "node server/express.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.7.1",
+    "eslint-plugin-react": "^6.3.0"
+  }
+}
