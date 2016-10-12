@@ -1,4 +1,5 @@
 import { Base } from 'yeoman-generator'
+// import gitRemoteOriginUrl from 'git-remote-origin-url'
 // import { forEach } from 'lodash'
 // import { join } from 'path'
 
@@ -10,14 +11,17 @@ export default class AppGenerator extends Base {
 
   initializing() {
     this.log('AppGenerator.initializing')
+    this.composeWith('supermind:linting')
   }
 
   //----------------------------------------
-  // Prompt
+  // Prompt User
   //----------------------------------------
 
   prompting() {
     this.log('AppGenerator.prompting')
+    // gitRemoteOriginUrl().then(url => this.log(url))
+    // const { name, email } = this.user.git
     // return this.prompt([{
     //   name: 'name',
     //   message: 'Name:',
@@ -36,9 +40,7 @@ export default class AppGenerator extends Base {
     // }, {
     //   name: 'author',
     //   message: 'Author:',
-    //   default: 'name <email>'
-    //     .replace('name', this.user.git.name())
-    //     .replace('email', this.user.git.email())
+    //   default: `${name()} <${email()}>`
     // }, {
     //   name: 'url',
     //   message: 'Repository URL:',
@@ -67,7 +69,7 @@ export default class AppGenerator extends Base {
   }
 
   //----------------------------------------
-  // Write
+  // Write Template Files
   //----------------------------------------
 
   writing() {
@@ -79,7 +81,7 @@ export default class AppGenerator extends Base {
   }
 
   //----------------------------------------
-  // Conflicts
+  // Manage Conflicts
   //----------------------------------------
 
   conflicts() {
@@ -87,7 +89,7 @@ export default class AppGenerator extends Base {
   }
 
   //----------------------------------------
-  // Install
+  // Install Dependencies
   //----------------------------------------
 
   install() {
