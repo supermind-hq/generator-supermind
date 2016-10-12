@@ -1,8 +1,7 @@
-## Install Yeoman & Supermind Generator
+## Installation
 
 ```bash
-npm install yo --global
-npm install generator-supermind --global
+npm install yo generator-supermind --global
 ```
 
 ## Project Generator
@@ -49,10 +48,14 @@ yo supermind:state state-name
 
 All generator code is written in ES6 and is transpiled through Babel.
 
+```bash
+npm install yarn --global
+```
+
 #### Clone & Link Supermind Generator
 
 ```bash
 git clone https://github.com/supermind-hq/generator-supermind
 cd generator-supermind
-npm link
+yarn install && yarn link
 ```
