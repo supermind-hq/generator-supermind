@@ -20,6 +20,12 @@ yo supermind
 yo supermind:linting
 ```
 
+#### Packager
+
+```bash
+yo supermind:packager
+```
+
 #### React Component
 
 ```bash

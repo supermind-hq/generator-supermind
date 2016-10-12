@@ -12,6 +12,7 @@ export default class AppGenerator extends Base {
   initializing() {
     this.log('AppGenerator.initializing')
     this.composeWith('supermind:linting')
+    this.composeWith('supermind:packager')
   }
 
   //----------------------------------------
