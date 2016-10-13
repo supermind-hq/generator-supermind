@@ -8,14 +8,6 @@ export default class PackagerGenerator extends Base {
 
   prompting() {
     this.log('PackagerGenerator.prompting')
-    return this.prompt([{
-      type: 'confirm',
-      name: 'flow',
-      message: 'Use flow type checker:',
-      default: true
-    }]).then((answers) => {
-      this.config.set(answers)
-    })
   }
 
   //----------------------------------------
