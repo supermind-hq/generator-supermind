@@ -50,18 +50,54 @@ yo supermind:route route-name
 yo supermind:state state-name
 ```
 
-## Contributing
+## Development
 
-All generator code is written in ES6 and is transpiled through Babel.
+```
+git clone https://github.com/supermind-hq/generator-supermind
+cd generator-supermind
+```
+
+We use [yarn][yarn] to manage our project dependencies. To install yarn:
 
 ```bash
 npm install yarn --global
 ```
 
-#### Clone & Link Supermind Generator
+Next install the project dependencies with yarn:
 
 ```bash
-git clone https://github.com/supermind-hq/generator-supermind
-cd generator-supermind
-yarn install && yarn link
+yarn install
 ```
+
+To make the generator available globally on your system run:
+
+```bash
+yarn link
+```
+
+Open up a new terminal window and create a dummy project somewhere else on your system:
+
+```bash
+mkdir ~/Desktop/dummy-project
+```
+
+Link `generator-supermind` within the dummy project:
+
+```bash
+cd ~/Desktop/dummy-project
+yarn link generator-supermind
+```
+
+All generator code is written in ES6 and is transpiled through Babel.
+
+From within the `generator-supermind` terminal window run:
+
+```bash
+yarn run watch
+```
+
+This command will run a `gulp` script that watches the source directory for changes, compile any generator code and copy across any template files into a `generators` folder at the root of the project.
+
+The `generators` directory is deployed to `npm`, but _not_ committed to `git`.
+
+[yarn]:https://yarnpkg.com/
