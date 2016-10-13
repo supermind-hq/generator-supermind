@@ -30,13 +30,6 @@
     "comma-dangle": ["error", "never"],
     "quote-props": ["error", "consistent"],
     "semi": ["error", "never"],
-    "space-before-function-paren": ["error", "never"],
-
-    //----------------------------------------
-    // ESLint Import Plugin Rules
-    // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
-    //----------------------------------------
-
-    "import/prefer-default-export": "off"
+    "space-before-function-paren": ["error", "never"]
   }
 }
