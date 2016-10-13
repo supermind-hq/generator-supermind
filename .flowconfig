@@ -1,0 +1,14 @@
+[include]
+.*/source/.*
+
+[ignore]
+.*/etc/.*
+.*/node_modules/.*
+
+[libs]
+declarations/
+node_modules/iflow-lodash/index.js.flow
+
+[options]
+all=true
+module.name_mapper='^source/\(.*\)' -> '<PROJECT_ROOT>/source/\1'
