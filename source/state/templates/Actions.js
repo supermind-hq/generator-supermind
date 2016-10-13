@@ -21,3 +21,9 @@ export const creators = {
     return { type: types.ACTION_TWO, value }
   }
 }
+
+//----------------------------------------
+// Export Default
+//----------------------------------------
+
+export default { types, creators }
