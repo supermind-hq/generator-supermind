@@ -1,7 +1,5 @@
 import { Base } from 'yeoman-generator'
 // import gitRemoteOriginUrl from 'git-remote-origin-url'
-// import { forEach } from 'lodash'
-// import { join } from 'path'
 
 export default class AppGenerator extends Base {
 
@@ -10,7 +8,6 @@ export default class AppGenerator extends Base {
   //----------------------------------------
 
   initializing() {
-    this.log('AppGenerator.initializing')
     this.composeWith('supermind:linting')
     this.composeWith('supermind:packager')
   }
