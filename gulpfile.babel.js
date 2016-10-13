@@ -16,7 +16,7 @@ import { padStart, startCase } from 'lodash'
 //----------------------------------------
 
 const sourceGlob = 'source/**/*'
-const generatorGlob = 'source/*/index.js'
+const generatorGlob = 'source/*/*.js'
 const eventColors = {
   default: 'magenta',
   added: 'green',
