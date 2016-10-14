@@ -75,18 +75,24 @@ To make the generator available globally on your system run:
 yarn link
 ```
 
-Open up a new terminal window and create a dummy project somewhere else on your system:
+Open up a _new terminal window_ and create a dummy project somewhere else on your system:
 
 ```bash
 mkdir ~/Desktop/dummy-project
 ```
 
-Link `generator-supermind` within the dummy project, and then generate its boilerplate:
+Link `generator-supermind` within the dummy project:
 
 ```bash
 cd ~/Desktop/dummy-project
 yarn link generator-supermind
-yo supermind
+```
+
+To test the generator is linked and working, run some `yo` commands from within the dummy project:
+
+```bash
+yo supermind       // Generates the Supermind boilerplate
+yo supermind:state // Generates a new Redux state node
 ```
 
 From within the `generator-supermind` terminal window run:
@@ -95,8 +101,8 @@ From within the `generator-supermind` terminal window run:
 yarn run watch
 ```
 
-Now, any changes you make to `generator-supermind` will be immediately available to all the linked projects (so running `yo supermind` again in the `dummy-project` will apply the latest changes you've made to `generator-supermind`). 
+Any changes you make to `generator-supermind` will be immediately available to all linked projects (so running `yo supermind` again in the `dummy-project` will apply the latest changes you've made to `generator-supermind/source`).
 
-The `generators` directory in `generator-supermind` represents the _compiled generator code_ and is deployed to `npm`, but _not_ committed to `git`.
+The `generators` directory in `generator-supermind` represents the _compiled generator code_ that is deployed to `npm`, but _not_ committed to `git`.
 
 [yarn]:https://yarnpkg.com/
