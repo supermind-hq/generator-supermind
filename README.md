@@ -81,14 +81,13 @@ Open up a new terminal window and create a dummy project somewhere else on your 
 mkdir ~/Desktop/dummy-project
 ```
 
-Link `generator-supermind` within the dummy project:
+Link `generator-supermind` within the dummy project, and then generate its boilerplate:
 
 ```bash
 cd ~/Desktop/dummy-project
 yarn link generator-supermind
+yo supermind
 ```
-
-All generator code is written in ES6 and is transpiled through Babel.
 
 From within the `generator-supermind` terminal window run:
 
@@ -96,8 +95,8 @@ From within the `generator-supermind` terminal window run:
 yarn run watch
 ```
 
-This command will run a `gulp` script that watches the source directory for changes, compile any generator code and copy across any template files into a `generators` folder at the root of the project.
+Now, any changes you make to `generator-supermind` will be immediately available to all the linked projects (so running `yo supermind` again in the `dummy-project` will apply the latest changes you've made to `generator-supermind`). 
 
-The `generators` directory is deployed to `npm`, but _not_ committed to `git`.
+The `generators` directory in `generator-supermind` represents the _compiled generator code_ and is deployed to `npm`, but _not_ committed to `git`.
 
 [yarn]:https://yarnpkg.com/
