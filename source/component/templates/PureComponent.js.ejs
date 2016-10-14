@@ -1,0 +1,27 @@
+import React from 'react'
+
+//----------------------------------------
+// <%= name %>Component
+//----------------------------------------
+
+const <%= name %>Component = (props) => (
+  <div>{props.label}</div>
+)
+
+//----------------------------------------
+// Static
+//----------------------------------------
+
+<%= name %>Component.propTypes = {
+  label: React.PropTypes.string
+}
+
+<%= name %>Component.defaultProps = {
+  label: 'React Pure Component'
+}
+
+//----------------------------------------
+// Export
+//----------------------------------------
+
+export default <%= name %>Component

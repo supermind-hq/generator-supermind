@@ -1,0 +1,57 @@
+import React from 'react'
+
+//----------------------------------------
+// <%= name %>Component
+//----------------------------------------
+
+class <%= name %>Component extends React.Component {
+
+  //----------------------------------------
+  // Static
+  //----------------------------------------
+
+  static propTypes = {
+    label: React.PropTypes.string
+  }
+
+  static defaultProps = {
+    label: 'Clicks:'
+  }
+
+  //----------------------------------------
+  // Lifecycle
+  //----------------------------------------
+
+  constructor(props) {
+    super(props)
+    this.state = { clicks: 0 }
+  }
+
+  //----------------------------------------
+  // Render
+  //----------------------------------------
+
+  render() {
+    const { label } = this.props
+    const { clicks } = this.state
+    return (
+      <div onClick={this.onClick}>{label} {clicks}</div>
+    )
+  }
+
+  //----------------------------------------
+  // Handlers
+  //----------------------------------------
+
+  onClick = (event) => {
+    event.preventDefault()
+    const { clicks } = this.state
+    this.setState({ clicks: clicks + 1 })
+  }
+}
+
+//----------------------------------------
+// Export
+//----------------------------------------
+
+export default <%= name %>Component
