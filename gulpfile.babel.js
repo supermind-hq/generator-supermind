@@ -43,10 +43,10 @@ const logError = ({ name, message }) =>
 gulp.task('clean', () => del.sync('generators'))
 
 //----------------------------------------
-// Task: Compile
+// Task: Build
 //----------------------------------------
 
-gulp.task('compile', [ 'clean' ], (callback) => {
+gulp.task('build', [ 'clean' ], (callback) => {
   const generatorFilter = filter(generatorGlob, { restore: true })
   pump([
     gulp.src(sourceGlob),
@@ -65,8 +65,8 @@ gulp.task('compile', [ 'clean' ], (callback) => {
 // Task: Watch
 //----------------------------------------
 
-gulp.task('watch', [ 'compile' ], () => {
-  const watcher = gulp.watch(sourceGlob, [ 'compile' ])
+gulp.task('watch', [ 'build' ], () => {
+  const watcher = gulp.watch(sourceGlob, [ 'build' ])
   watcher.on('change', ({ type, path }) => {
     const color = eventColors[type] || eventColors.default
     const event = padStart(startCase(type), 8)

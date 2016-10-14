@@ -20,9 +20,10 @@
   },
   "scripts": {
     "clean": "gulp clean",
+    "build": "gulp build",
     "watch": "gulp watch",
-    "compile": "gulp compile",
-    "prepublish": "npm run compile"
+    "start": "gulp watch",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "git-remote-origin-url": "^2.0.0",
