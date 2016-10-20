@@ -30,6 +30,14 @@
     "comma-dangle": ["error", "never"],
     "quote-props": ["error", "consistent"],
     "semi": ["error", "never"],
-    "space-before-function-paren": ["error", "never"]
+    "space-before-function-paren": ["error", "never"],
+
+    //----------------------------------------
+    // React Rules
+    // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
+    //----------------------------------------
+
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-space-before-closing": ["error", "never"]
   }
 }
